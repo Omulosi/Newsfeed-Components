@@ -52,7 +52,13 @@ function createMenu(properties) {
 
   const menuBtn = document.querySelector('.menu-button');
   menuBtn.addEventListener('click', (e) => {
-    menu.classList.toggle('menu--open')
+    const menu = document.querySelector('.menu');
+    const menuDimensions = menu.getBoundingClientRect();
+    if (menuDimensions.x < 0) {
+      TweenMax.to(".menu", 1, {x: 350});
+    } else {
+      TweenMax.to(".menu", 2, {x: -350});
+    }
   })
 
   return menu;
@@ -60,3 +66,6 @@ function createMenu(properties) {
 
 const header = document.querySelector('.header');
 header.appendChild(createMenu(menuItems));
+
+    const menu = document.querySelector('.menu');
+    console.log(menu);
