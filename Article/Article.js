@@ -113,7 +113,7 @@ const data = [
 
 */
 
-function createElement({title, date, firstParagraph, secondParagraph, thirdParagraph}) {
+function createArticle({title, date, firstParagraph, secondParagraph, thirdParagraph}) {
   const article = document.createElement('div');
   const h2 = document.createElement('h2');
   const dateParagraph = document.createElement('p');
