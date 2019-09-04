@@ -147,6 +147,7 @@ function createArticle({title, date, firstParagraph, secondParagraph, thirdParag
   p1.textContent = firstParagraph;
   p2.textContent = secondParagraph;
   p3.textContent = thirdParagraph;
+  span.textContent = 'Toggle Read';
 
   span.addEventListener('click', (e) => {
     article.classList.toggle('article-open');
