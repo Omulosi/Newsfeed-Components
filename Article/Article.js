@@ -145,3 +145,13 @@ function createArticle({title, date, firstParagraph, secondParagraph, thirdParag
 
   return article;
 }
+
+const articleComponents = data.map((articleData) => {
+  return createArticle(articleData);
+});
+
+const container = document.querySelector('.articles');
+
+articleComponents.forEach((article) => {
+  container.appendChild(article);
+})
