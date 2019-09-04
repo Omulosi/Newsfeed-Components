@@ -6,6 +6,7 @@ let menuItems = [
   "What's New",
   'Tech Trends',
   'Music',
+  'Add an Article',
   'Log Out'
 ];
 
@@ -39,6 +40,7 @@ function createMenu(properties) {
   menu.classList.add('menu');
 
   const ul = document.createElement('ul');
+  ul.classList.add('menu-items');
 
   properties.forEach((data) => {
     const li = document.createElement('li');
